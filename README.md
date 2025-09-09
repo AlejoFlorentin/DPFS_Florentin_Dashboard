@@ -1,12 +1,19 @@
-# React + Vite
+# Dashboard Superlative
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+es una interfaz de administración desarrollada para un e-commerce de indumentaria llamado Superlative. Este panel de control está construido utilizando React JS y Material UI, lo que garantiza una experiencia de usuario moderna, ágil y visualmente coherente.
 
-Currently, two official plugins are available:
+El dashboard permite al equipo de gestión visualizar de forma clara y rápida los datos clave del negocio, incluyendo:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Total de productos disponibles
 
-## Expanding the ESLint configuration
+- Cantidad total de usuarios registrados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Número de categorías activas
+
+- Detalle del último producto o usuario creado
+
+- Panel con el total de productos por categoría
+
+- Listado completo de productos
+
+Gracias a su diseño responsivo y estructura modular, el sistema es fácilmente escalable y adaptable a nuevas funcionalidades. Esta herramienta fue pensada para optimizar la toma de decisiones, facilitar el seguimiento del catálogo y mejorar el control general del e-commerce.
