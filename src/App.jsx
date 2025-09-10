@@ -1,11 +1,14 @@
+import { Button, Container } from '@mui/material';
 import './App.css';
-import Header from './components/Header';
+import Layout from './components/Layout';
+import Totals from './components/Totals/TotalCard';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <>
-      <Header />
-    </>
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
 

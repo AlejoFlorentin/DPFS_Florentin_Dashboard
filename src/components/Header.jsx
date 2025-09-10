@@ -1,16 +1,25 @@
-import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Container, Toolbar, Typography } from '@mui/material';
 
 const Header = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static' sx={{ backgroundColor: '#000000ff' }}>
+    <AppBar
+      sx={{
+        backgroundColor: 'black',
+        height: '100px',
+      }}
+      component='nav'
+    >
+      <Container
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}
+        maxWidth='md'
+      >
         <Toolbar>
           <Typography variant='h4' component='div'>
-            Superlative
+            Superlative Dashboard
           </Typography>
         </Toolbar>
-      </AppBar>
-    </Box>
+      </Container>
+    </AppBar>
   );
 };
 
