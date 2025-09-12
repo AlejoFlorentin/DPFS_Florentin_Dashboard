@@ -1,14 +1,19 @@
-import { Button, Container } from '@mui/material';
 import './App.css';
 import Layout from './components/Layout';
-import Totals from './components/Totals/TotalCard';
 import Home from './pages/Home/Home';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import UserDetail from './pages/UserDetail/UserDetail';
 
 function App() {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/user/:id' element={<UserDetail />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
