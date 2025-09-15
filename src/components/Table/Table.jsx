@@ -1,43 +1,67 @@
-import { Box } from '@mui/material';
-import { DataGrid } from '@mui/x-data-grid';
-import useFetch from '../../hooks/useFetch';
+import { Box } from "@mui/material";
+import { DataGrid } from "@mui/x-data-grid";
+import useFetch from "../../hooks/useFetch";
+import { formatNumber } from "../../services/formatNumber";
 
-const Table = () => {
-  const {
-    data: products,
-    loading: loadingProducts,
-    error: errorProducts,
-  } = useFetch('http://localhost:3000/api/products');
-
-  const columns = products?.products?.length
-    ? Object.keys(products.products[0]).map(key => ({
-        field: key,
-        headerName: key.toUpperCase(),
-        width: 150,
-        editable: false,
-      }))
-    : [];
+const Table = ({ products, loadingProducts }) => {
+  const columns = [
+    {
+      field: "id",
+      headerName: "ID",
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "title",
+      headerName: "Titulo",
+      flex: 2,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "price",
+      headerName: "Precio",
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
+      valueGetter: (value, row) => formatNumber(row.price),
+    },
+    {
+      field: "sizes",
+      headerName: `Size`,
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
+      valueGetter: (value, row) => row.sizes[0].size,
+    },
+    {
+      field: "stock",
+      headerName: "Stock",
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
+    },
+  ];
 
   return (
     <>
-      {products !== null && (
-        <Box sx={{ height: 500, width: '100%' }}>
-          <DataGrid
-            rows={products.products}
-            columns={columns}
-            initialState={{
-              pagination: {
-                paginationModel: {
-                  pageSize: 5,
-                },
+      <Box sx={{ height: "100%", width: "100%" }}>
+        <DataGrid
+          rows={products}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 8,
               },
-            }}
-            pageSizeOptions={[5]}
-            disableRowSelectionOnClick
-            loading={loadingProducts}
-          />
-        </Box>
-      )}
+            },
+          }}
+          pageSizeOptions={[8]}
+          disableRowSelectionOnClick
+          loading={loadingProducts}
+        />
+      </Box>
     </>
   );
 };

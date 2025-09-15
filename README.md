@@ -1,6 +1,6 @@
 # Dashboard Superlative
 
-es una interfaz de administración desarrollada para un e-commerce de indumentaria llamado Superlative. Este panel de control está construido utilizando React JS y Material UI, lo que garantiza una experiencia de usuario moderna, ágil y visualmente coherente.
+Es una interfaz de administración desarrollada para un e-commerce de indumentaria llamado Superlative. Este panel de control está construido utilizando React JS y Material UI, lo que garantiza una experiencia de usuario moderna, ágil y visualmente coherente.
 
 El dashboard permite al equipo de gestión visualizar de forma clara y rápida los datos clave del negocio, incluyendo:
 
